@@ -56,15 +56,6 @@ const Login = () => {
         onChangeText={(text) => setValue("user", text)}
       />
       {errors.user && <Text style={{ color: "red" }}>{errors.user.message}</Text>}
-      {/* <Text style={styles.label}>Contraseña</Text> */}
-      {/* <TextInput
-        {...register("password")}
-        secureTextEntry
-        style={styles.input}
-        onChangeText={(text) => setValue("password", text)}
-      />
-      {errors.password && <Text style={{ color: "red" }}>{errors.password.message}</Text>} */}
-
       <View style={styles.buttonContainer}>
         <Button onPress={handleSubmit(onSubmit)} label="Login"/>
       </View>

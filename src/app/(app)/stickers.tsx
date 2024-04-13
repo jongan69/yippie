@@ -7,15 +7,16 @@ import { captureRef } from 'react-native-view-shot';
 import domtoimage from 'dom-to-image';
 
 // Components
-import Button from '../../src/components/Button';
-import ImageViewer from '../../src/components/ImageViewer';
-import IconButton from '../../src/components/IconButton';
-import CircleButton from '../../src/components/CircleButton';
-import EmojiSticker from '../../src/components/EmojiSticker';
-import EmojiPicker from '../../src/components/EmojiPicker';
-import EmojiList from '../../src/components/EmojiList'
+import Button from '../../components/Button';
+import ImageViewer from '../../components/ImageViewer';
+import IconButton from '../../components/IconButton';
+import CircleButton from '../../components/CircleButton';
+import EmojiSticker from '../../components/EmojiSticker';
+import EmojiPicker from '../../components/EmojiPicker';
+import EmojiList from '../../components/EmojiList'
+import React from "react";
 
-const PlaceholderImage = require("../../src/assets/background.png");
+const PlaceholderImage = require("../../assets/background.png");
 
 export default function App() {
   const [selectedImage, setSelectedImage] = useState(null);

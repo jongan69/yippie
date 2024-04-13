@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Pokemon, PokemonList } from "@models/pokemon.type";
+import { Pokemon, PokemonList } from "../models/pokemon.type";
 import { pokemonApiConfig } from "./api.config";
 
 type GetPokemonListParams = {

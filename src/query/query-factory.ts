@@ -1,5 +1,5 @@
 import { createQueryKeyStore } from '@lukemorales/query-key-factory'
-import { Pokemon } from '@models/pokemon.type'
+import { Pokemon } from '../models'
 import { pokemonApi } from './api.pokemon'
 
 export const pokemonKeys = createQueryKeyStore({
