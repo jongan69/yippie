@@ -27,7 +27,7 @@ const RootLayout = () => {
   useReactQueryDevTools(client);
   const segments = useSegments();
   const isLogin = segments[segments.length - 1] === "(tabs)";
-  const drawerTitle = isLogin ? "Welcome" : segments.length > 0 ? segments[segments.length - 1].toLowerCase() : "";
+  const drawerTitle = isLogin ? "Welcome" : segments.length > 0 ? segments[segments.length - 1].toUpperCase() : "";
 
   const runTypeMessage = Updates.isEmbeddedLaunch
     ? 'This app is running from built-in code'
@@ -43,18 +43,19 @@ const RootLayout = () => {
         drawerContent={(props) => {
           return (
             <DrawerContentScrollView {...props}>
-              <DrawerItem label="Join Whitelist" onPress={() => Linking.openURL('https://mememe.ooo')} />
+              <DrawerItem 
+              label="Join Whitelist" 
+              //onPress={() => Linking.openURL('https://mememe.ooo')} 
+              onPress={() => router.replace('/')}
+              />
               <Link href={ROUTES.Home} onPress={() => props.navigation.closeDrawer()}>
                 Home
               </Link>
               <Link
-                href={{ pathname: ROUTES.Details, params: { user: "evanbacon" } }}
+                href={{ pathname: ROUTES.Stickers }}
                 onPress={() => props.navigation.closeDrawer()}
               >
-                Details
-              </Link>
-              <Link href={ROUTES.Counter} onPress={() => props.navigation.closeDrawer()}>
-                Counter
+                Stickers
               </Link>
             </DrawerContentScrollView>
           );

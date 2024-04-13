@@ -24,16 +24,16 @@ const RouterTabs = () => {
         }}
       />
       <Tabs.Screen
-        name="details"
+        name="stickers"
         options={{
-          title: "Bets",
-          href: { pathname: "/details", params: { user: "evanbacon" } },
+          title: "Stickers",
+          href: { pathname: "/stickers" },
           tabBarIcon: ({ focused }) => focused
             ? <MaterialCommunityIcons color="white" name="dice-multiple" size={24} />
             : <MaterialCommunityIcons color="white" name="dice-multiple-outline" size={24} />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="counter"
         options={{
           title: usePathname()  === '/counter' ? "Let it Sink in" : "Stats",
@@ -41,7 +41,7 @@ const RouterTabs = () => {
             ? <MaterialCommunityIcons color="white" name="countertop" size={24} />
             : <MaterialCommunityIcons color="white" name="counter" size={24} />,
         }}
-      />
+      /> */}
       <Tabs.Screen name="index" options={{ href: null, }} />
     </Tabs>
   );

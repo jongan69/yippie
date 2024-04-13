@@ -7,16 +7,11 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Home</Text>
+        <Text style={styles.title}>Yippie!</Text>
         <View className="flex-1 items-center justify-center bg-red-500">
-          <Text className="text-md font-bold">Hello World</Text>
+          <Text className="text-md font-bold">You Made it</Text>
         </View>
-        <Text style={styles.subtitle}>This is the Details page of your app.</Text>
-        <View>
-          {data?.results ? data.results.map((item) => (
-            <Text key={item.name}>{item.name}</Text>
-          )) : <Text>No data</Text>}
-        </View>
+        <Text style={styles.subtitle}>{`There is no app, I love you <3`}</Text>
       </View>
     </View>
   );

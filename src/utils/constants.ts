@@ -2,6 +2,6 @@ export const ROUTES = {
   Root: "/",
   Login: "/login",
   Home: "/home",
-  Details: "/details",
+  Stickers: "/stickers",
   Counter: "/counter",
 };

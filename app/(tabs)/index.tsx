@@ -44,7 +44,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View className="flex-1 items-center justify-center bg-white">
-      <Text style={styles.title}>Welcome to MEMEME</Text>
+      <Text style={styles.title}>Welcome to YIPPIE</Text>
       <Text className="text-md font-bold">If you are whitelisted please login:</Text>
         </View>
       <Text style={styles.label}>Wallet Address</Text>
@@ -66,7 +66,7 @@ const Login = () => {
       {errors.password && <Text style={{ color: "red" }}>{errors.password.message}</Text>} */}
 
       <View style={styles.buttonContainer}>
-        <Button onPress={handleSubmit(onSubmit)} title="Login"/>
+        <Button onPress={handleSubmit(onSubmit)} label="Login"/>
       </View>
     </View>
   );

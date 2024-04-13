@@ -2,13 +2,14 @@ import { Text, StyleSheet, Pressable, PressableProps } from "react-native";
 
 interface ButtonProps extends PressableProps {
   onPress: () => void;
-  title?: string;
+  label?: string;
+  theme?: any
 }
 
-const Button = ({ onPress, title = "Button", ...rest }: ButtonProps) => {
+const Button = ({ onPress, label, ...rest }: ButtonProps) => {
   return (
     <Pressable style={styles.button} onPress={onPress} {...rest}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text}>{label}</Text>
     </Pressable>
   );
 };
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: "black",
+    margin: 2
   },
   text: {
     fontSize: 16,
